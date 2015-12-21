@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="css/metro-icons.css" />
+        <link rel="stylesheet" href="css/metro.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+        <!--<script type="text/javascript" src="js/metro.js"></script>-->
+        <script type="text/javascript" src="js.js"></script>
+
+        <style media="screen">
+            form>*{
+                margin: 0 auto;
+                text-align: center;
+            }
+            form div{
+                display: block !important;
+                margin: 3rem auto !important;
+            }
+        </style>
+    </head>
+    <body>
+         <form data-role="validator">
+            <label class="block">firstname</label>
+            <div class="input-control text">
+                <input
+                    data-validate-func="minlength"
+                    data-validate-arg="6"
+                    data-validate-hint-position="bottom"
+                    data-validate-hint="Escribe como minimo 6 caracteres aceptables!"
+                    type="text">
+                <span class="input-state-error mif-warning"></span>
+                <span class="input-state-success mif-checkmark"></span>
+            </div>
+            <label class="block">lastname</label>
+            <div class="input-control text">
+                <input
+                    data-validate-func="minlength"
+                    data-validate-arg="6"
+                    data-validate-hint-position="left"
+                    data-validate-hint="Escribe como minimo 6 caracteres aceptables!"
+                    type="text">
+                <span class="input-state-error mif-warning"></span>
+                <span class="input-state-success mif-checkmark"></span>
+            </div>
+            <label class="block">email</label>
+            <div class="input-control email">
+                <input
+                    data-validate-func="email"
+                    data-validate-hint="Escribe un e-mail aceptable!"
+                    type="email">
+                <span class="input-state-error mif-warning"></span>
+                <span class="input-state-success mif-checkmark"></span>
+            </div>
+            <div>
+                <button class="button success">Send</button>
+            </div>
+        </form>
+
+
+        <form id="formulario">
+            <label class="block">email</label>
+            <div id="emaill" class="input-control email">
+                <input
+                    data-validate-func="email"
+                    data-validate-hint="Escribe un e-mail aceptable!"
+                    type="email">
+                <span class="input-state-error mif-warning"></span>
+                <span class="input-state-success mif-checkmark"></span>
+            </div>
+            <div>
+                <button class="button success">Send</button>
+            </div>
+        </form>
+
+    </body>
+</html>
